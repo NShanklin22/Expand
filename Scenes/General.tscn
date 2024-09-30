@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfh6iun8u82k0"]
+
+[ext_resource type="Texture2D" uid="uid://y6romqdq1bsf" path="res://Assets/guy.svg" id="1_66l1o"]
+[ext_resource type="Script" path="res://Scripts/GenerateGuy.gd" id="2_5ht05"]
+
+[node name="General" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_66l1o")
+script = ExtResource("2_5ht05")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
