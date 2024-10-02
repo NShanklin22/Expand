@@ -27,10 +27,10 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 440.0
-offset_top = 442.0
-offset_right = 707.0
-offset_bottom = 551.0
+offset_left = 649.0
+offset_top = 436.0
+offset_right = 916.0
+offset_bottom = 545.0
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 64
 text = "Nate!
