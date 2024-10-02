@@ -1,9 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://d3apiuabdj7oy"]
+[gd_scene load_steps=6 format=3 uid="uid://d3apiuabdj7oy"]
 
 [ext_resource type="Script" path="res://Scripts/HelloWorld.gd" id="1_l1yk4"]
 [ext_resource type="PackedScene" uid="uid://bfh6iun8u82k0" path="res://Scenes/General.tscn" id="2_aifoq"]
+[ext_resource type="PackedScene" uid="uid://cea8quxfpoty" path="res://Scenes/ball.tscn" id="3_5ikes"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_muq88"]
+size = Vector2(1147, 37)
+
+[sub_resource type="ImageTexture" id="ImageTexture_kwlcj"]
 
 [node name="Main" type="Node2D"]
+position = Vector2(-557, -362)
 script = ExtResource("1_l1yk4")
 
 [node name="Label1" type="Label" parent="."]
@@ -17,6 +24,7 @@ text = "Nate!
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="."]
 offset_left = 440.0
@@ -29,8 +37,26 @@ text = "Nate!
 "
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Node2D" type="Node2D" parent="."]
+metadata/_edit_use_anchors_ = true
 
 [node name="General" parent="." instance=ExtResource("2_aifoq")]
-position = Vector2(602, 307)
+position = Vector2(557, 365)
+
+[node name="Ball" parent="." instance=ExtResource("3_5ikes")]
+position = Vector2(554, 108)
+
+[node name="Wall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+position = Vector2(558, 557)
+shape = SubResource("RectangleShape2D_muq88")
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall"]
+texture = SubResource("ImageTexture_kwlcj")
+
+[node name="ColorRect" type="ColorRect" parent="Wall"]
+offset_left = -17.0
+offset_top = 538.0
+offset_right = 1134.0
+offset_bottom = 574.0
+color = Color(1, 0, 0, 1)

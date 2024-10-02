@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cea8quxfpoty"]
+
+[ext_resource type="Texture2D" uid="uid://cwtfnxcq7r250" path="res://Assets/istockphoto-1305166860-612x612 (3).png" id="1_ecb6f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e2vio"]
+radius = 31.0161
+
+[node name="RigidBody2D" type="RigidBody2D"]
+mass = 5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.125, 0.125)
+shape = SubResource("CircleShape2D_e2vio")
+debug_color = Color(1, 0, 0, 0.419608)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.304799, 0.304799)
+scale = Vector2(0.129723, 0.129723)
+texture = ExtResource("1_ecb6f")

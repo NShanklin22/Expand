@@ -5,4 +5,6 @@ extends Node2D
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouse and event.is_pressed():
-		print("MOUSE RELEASED RUN!!!")
+		var mousePosition = get_global_mouse_position()
+		position = mousePosition
+		print("Moved!")
